@@ -1,21 +1,19 @@
 # Subresource Integrity
 
-- Checkout Branch `sri` (`git checkout sri`)
-- We always have loves JQuery - let's add it back to our Angular Application:
-- In index.html load the minified version of JQuery 'https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js'
-- Implement sub resource integrity (SRI) to check the resource integrity
-- Investigate the `dist`-Folder. The `index.html` should have also some SRIs for the application files.
+In Task `10_TrustedTypes` we included the DOMPurifier from a CDN 
+Let's add a SRI-Check to ensure we are loading the correct file.
 
 Tools for generating SRI hashes
 SRI Hash Generator
 The [SRI Hash Generator](https://www.srihash.org/) is an online tool you can use to generate SRI hashes.
 
+The script should still be loaded and you should still be able
+to create a Trusted Type with the loaded DomPurifier.
+
+Check what happens if you change the Hash Value a bit (by removing a sign)
 
 ### Hints
-`ng build --subresource-integrity`
 
 ```html
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js" integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js" integrity="sha384-cn5CQtD1KW3XEJbmZipeNG2pq0b4WI6PXFhd83xBTcOzB0HubvrHXDkfO3kmM7oV" crossorigin="anonymous"></script>
 ```
-
-[Solution](https://github.com/martinakraus/angular-security/tree/sri-solution)
