@@ -2,7 +2,7 @@
 
 ## Preperation
 
-1. Open the application `CSRF-STP-Prevention`
+1. Open the application `stp-against-csrf `
 2. Run `npm i` to install dependencies
 3. To run the application: `npm start` 
 

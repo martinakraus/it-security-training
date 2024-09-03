@@ -7,3 +7,10 @@
 3. Observe the POST request sent after the Send Service Request. You will find a property `mechanic_api`
 4. Send the request again but change the URL in `mechanic_api` to `https://www.google.com`
 
+## Hints
+
+```
+POST http://localhost:8888/workshop/api/merchant/contact_mechanic
+
+{"mechanic_code":"TRAC_JHN","problem_details":"test","vin":"4KQEV62ABHF098155","mechanic_api":"https://www.google.com","repeat_request_if_failed":false,"number_of_repeats":1}
+```
