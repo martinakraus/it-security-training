@@ -23,37 +23,41 @@
 ### Hint
 
 ```typescript
-    if (window.trustedTypes && trustedTypes.createPolicy) { // Feature testing
-    const escaped = DOMPurify.sanitize('<img src=x onerror=alert(1)>' , {RETURN_TRUSTED_TYPE: true})
+if (window.trustedTypes && trustedTypes.createPolicy) {
+  // Feature testing
+  const escaped = DOMPurify.sanitize("<img src=x onerror=alert(1)>", {
+    RETURN_TRUSTED_TYPE: true,
+  });
 
-    document.getElementById('martina').innerHTML = escaped;
+  document.getElementById("martina").innerHTML = escaped;
 }
 ```
 
 ### Optional Task: Use your custom Policy for escaping the dangerous string
+
 - Use your custom Policy for escaping the dangerous string `<img src=x onerror=alert(1)>` before assining to innerHTML:
 
 ```typescript
-trustedTypes.createPolicy('myEscapePolicy', {
-    createHTML: text => {
-        // write own policy
-    }
+trustedTypes.createPolicy("myEscapePolicy", {
+  createHTML: (text) => {
+    // write own policy
+  },
 });
 ```
 
 ### Hint
 
 ```javascript
-if (window.trustedTypes && trustedTypes.createPolicy) { // Feature testing
-    const escapeHTMLPolicy = trustedTypes.createPolicy('myEscapePolicy', {
-        createHTML: text => text.replace(/\</g, '&lt;')
-    });
+if (window.trustedTypes && trustedTypes.createPolicy) {
+  // Feature testing
+  const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
+    createHTML: (text) => text.replace(/\</g, "&lt;"),
+  });
 
-    const escaped = escapeHTMLPolicy.createHTML('<img src=x onerror=alert(1)>')
+  const escaped = escapeHTMLPolicy.createHTML("<img src=x onerror=alert(1)>");
 
-    document.getElementById('martina').innerHTML = escaped;
+  document.getElementById("martina").innerHTML = escaped;
 }
 ```
-
 
 [Official Documentation](https://content-security-policy.com/nonce/)

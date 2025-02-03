@@ -24,11 +24,23 @@ We need to fix that:
 - Import the bcrypt Library in your server.js file
 - use the `compare`-Function to compare the hash passwords
 
-
 ## Hints
 
-You can use the Postman Collection `Password-Encryption/Password-Encryption.postman_collection.json` for testing your endpoints
+You can use either the Postman Collection `Password-Encryption/Password-Encryption.postman_collection.json` for testing your endpoints or by using CURL:
 
+```
+//register:
+
+curl -X POST http://localhost:3000/register \
+     -H "Content-Type: application/json" \
+     -d '{"username": "username", "password": "password"}'
+
+//login:
+
+curl -X POST http://localhost:3000/login \
+     -H "Content-Type: application/json" \
+     -d '{"username": "username", "password": "password"}'
+```
 
 ```javascript
 import bcrypt from 'bcrypt';

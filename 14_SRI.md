@@ -1,6 +1,6 @@
 # Subresource Integrity
 
-In Task `10_TrustedTypes` we included the DOMPurifier from a CDN 
+In Task `10_TrustedTypes` we included the DOMPurifier from a CDN
 Let's add a SRI-Check to ensure we are loading the correct file.
 
 Tools for generating SRI hashes
@@ -15,5 +15,9 @@ Check what happens if you change the Hash Value a bit (by removing a sign)
 ### Hints
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js" integrity="sha384-cn5CQtD1KW3XEJbmZipeNG2pq0b4WI6PXFhd83xBTcOzB0HubvrHXDkfO3kmM7oV" crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.7/purify.min.js"
+  integrity="sha384-cn5CQtD1KW3XEJbmZipeNG2pq0b4WI6PXFhd83xBTcOzB0HubvrHXDkfO3kmM7oV"
+  crossorigin="anonymous"
+></script>
 ```

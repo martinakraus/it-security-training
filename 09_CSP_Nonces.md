@@ -6,6 +6,7 @@
 2. Run `npm i` (if you haven't already)
 3. Page/ Template to this task: `list-names-with-count-nonces.ejs`
 4. Start the Server with `npm start`
+5. Open the Web Application in your Web Browser: `http://localhost:3000/nonces`
 
 ## Task: Use CSP to secure your app against inline scripting
 
@@ -15,23 +16,23 @@
 
 ## Hints
 
-
 ```typescript
-const { expressCspHeader } = require('express-csp-header');
+const { expressCspHeader } = require("express-csp-header");
 
 const csp_nonces = {
-    directives: {
-        'script-src': [ NONCE ] // NONCE refers to a freshly calculated nonce
-    }
-}
-
+  directives: {
+    "script-src": [NONCE], // NONCE refers to a freshly calculated nonce
+  },
+};
 
 app.get("/nonces", expressCspHeader(csp_nonces), (req, res) => {
-    // Render the EJS page with the data
-    // The middleware exposes the calculated nonce on req.nonce
-    res.render(`${PAGES}/list-names-with-count-nonces`, { data: data, nonce: req.nonce });
+  // Render the EJS page with the data
+  // The middleware exposes the calculated nonce on req.nonce
+  res.render(`${PAGES}/list-names-with-count-nonces`, {
+    data: data,
+    nonce: req.nonce,
+  });
 });
-
 ```
 
 [Official Documentation](https://content-security-policy.com/nonce/)

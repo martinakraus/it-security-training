@@ -3,6 +3,7 @@
 ## Preperation
 
 1. Install [OWASP Dependency-Tracker](https://dependencytrack.org/):
+
 ```bash
 > curl -LO https://dependencytrack.org/docker-compose.yml
 > docker compose up -d
@@ -17,4 +18,4 @@
 
 1. Create a SBOM with `cyclonedx-npm --output-file bom.json`
 2. Upload the created SBOM inside the dependency-tracker:
-![img.png](img.png)
+   ![img.png](img.png)

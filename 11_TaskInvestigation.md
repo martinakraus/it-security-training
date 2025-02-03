@@ -1,8 +1,8 @@
-# Cross Site Request Forgery Example
+# Hack a Demo Application
 
 ## Preperation
 
-1. Open the application `csrf-sample-app`
+1. Open the application `hacking-demo-app`
 2. Run `npm i`
 3. Follow the instructions inside the `README.md` file
 
@@ -10,4 +10,3 @@
 
 - How did this attack happen?
 - How does a good prevention look like for this example?
-
