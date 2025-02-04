@@ -3,8 +3,7 @@
 ## Preperation
 
 1. Open the application `cors-app`
-2. Run `npm install`
-3. Follow the setup steps inside the `README/md`-file
+2. Follow the setup steps inside the `README.md`-file
 
 ## Task: Configure CORS
 
