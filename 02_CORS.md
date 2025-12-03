@@ -15,7 +15,7 @@ Inside the `index.html` you also see that the `POST` Request is made to our API 
 
 - the origin `http://localhost:3000`
 - The POST-Method
-- Only the two Request-Header: `Content-Type` and `X-Custom-Header`
+- The two Request-Headers: `Content-Type` and `X-Custom-Header`
 
 Check the results inside the Developer Tools in your Web Browser.
 By checking the Response Header on the `login`-Request you should see your configured `access-control-allow-*`-Header.
@@ -44,3 +44,5 @@ interface CorsOptions {
   maxAge?: number | undefined;
 }
 ```
+
+[Solution](https://github.com/martinakraus/security-intro-2025/commit/08e9a1c4d528ee8bdee98d178e549c7ec4a3f152)
