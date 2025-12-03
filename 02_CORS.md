@@ -39,7 +39,6 @@ interface CorsOptions {
    */
   methods?: string | string[] | undefined;
   allowedHeaders?: string | string[] | undefined;
-  exposedHeaders?: string | string[] | undefined;
   credentials?: boolean | undefined;
   maxAge?: number | undefined;
 }
