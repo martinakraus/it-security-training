@@ -1,6 +1,6 @@
 # Cryptographic Primitives
 
-1. Open Miro (the link you received from your trainer) and setup your Account
+1. Open [Miro](https://miro.com/welcomeonboard/Ry9JVlZJVVUzNWsraDFnQWxNS2tqRnYzSzFxR01OSTE5Wm9TQnRUYk9SQUFQbkNiN0I2WjE3S1hJdHVweTdvUlpXalF2OS9JR0FTQ2RLMGVZblY3VlhhTE1MeHRPS0JPc3ErSENSeDdMM1ZsRTYrOXRsMzlsWVd6cHljWTVQM1RyVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=434158557785) and setup your Account
 
 2. Open the board `IT Security Training` and assign one section to yourself
 
