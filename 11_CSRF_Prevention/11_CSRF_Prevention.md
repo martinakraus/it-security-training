@@ -1,6 +1,6 @@
 # Cross-Site Request Forgery Protection in Angular
 
-- Clone the following repo: `https://github.com/martinakraus/angular-security-2025`
+- Clone the following repo: `https://github.com/martinakraus/angular-security-2026`
 - Checkout the branch `csrf-prevention`
 - Install the dependencies `npm install`
 - To start the Server run `npm start` from the root directory
